@@ -21,6 +21,7 @@ fi
 
 # Migrate database to current version and collect static files
 if [ "x$1" = "xrunserver" ] ; then
+    $START_CMD makemigrations
     $START_CMD migrate
     $START_CMD collectstatic --noinput
     if [ -n "$WEBLATE_ADMIN_PASSWORD" ] ; then

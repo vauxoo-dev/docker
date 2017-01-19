@@ -37,6 +37,9 @@ RUN ln -s /app/etc/settings.py /usr/local/lib/python2.7/dist-packages/weblate/se
 ENV DJANGO_SETTINGS_MODULE weblate.settings
 ENV START_CMD "/usr/local/bin/django-admin"
 
+# This is needed to perform the migration, find a better way
+RUN chmod o+w -R /usr/local/lib/python2.7/dist-packages/weblate/trans
+
 VOLUME ["/app/etc", "/app/data"]
 USER weblate
 
