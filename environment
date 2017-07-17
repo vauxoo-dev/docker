@@ -37,6 +37,10 @@ POSTGRES_DATABASE=weblate
 POSTGRES_HOST=database
 POSTGRES_PORT=
 
+# ssh setup
+SSH_USER=weblate
+SSH_KEY=
+
 # Mail server, the server has to listen on port 587 and understand TLS
 WEBLATE_EMAIL_HOST=smtp.gmail.com
 # Do NOT use quotes here
